@@ -1,0 +1,37 @@
+
+
+Sample Name: Armadillo_v1xx_v2xx_additional\_3fa58e2a4d2b6213799c7ac8accee863
+Compiler: Microsoft Visual C++ 6.0 DLL [Debug]
+Entropy Value: 5.81
+DOS HEader Signature: 5A4D
+Offeset to PE header: F8
+PE Signature: 4550
+Characteristics: 2000 (Image_FILE_DLL)
+Number of Sections: 04
+Sections:
+	.text
+	.rdata
+	.data
+	.reloc
+Export Functions:
+Name			Address		Ordinal
+LSKEJFHSNNNNSJDJHFF	10007BF7	1
+DllEntryPoint		1000B513	[main entry]
+
+Strings:
+00000000FD40   00001000FD40      0   \Tencent\Users\*.*
+00000000FD58   00001000FD58      0   SeShutdownPrivilege
+00000000FD6C   00001000FD6C      0   {4D36E972-E325-11CE-BFC1-08002BE10318}
+00000000EB48   00001000EB48      0   %s\%d.bak
+00000000EB54   00001000EB54      0   %s\shell\open\command
+00000000F198   00001000F198      0   Avira
+00000000F1A4   00001000F1A4      0   Avast
+00000000F1B0   00001000F1B0      0   Dr.WEB
+00000000F1BC   00001000F1BC      0   McAfee
+00000000F1DC   00001000F1DC      0   Arcavir
+00000000F20C   00001000F20C      0   BitDefender
+00000000F354   00001000F354      0   Quick Heal
+00000000F354   00001000F354      0   Quick Heal
+00000000F868   00001000F868      0   gethostbyname
+00000000FBF8   00001000FBF8      0   C:\2.txt
+

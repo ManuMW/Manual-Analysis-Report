@@ -1,0 +1,26 @@
+
+
+Sample: Armadillo_v1xx_v2xx_additional\_048b6fddf7f896881ef9076067720e9c
+Compiler: Microsoft Visual C++ 6.0 DLL [Debug]
+Entropy Value: 6.26
+DOS HEader Signature: 5A4D
+Offeset to PE header: F8
+PE Signature: 4550
+Characteristics: 2000 (Image_FILE_DLL)
+Number of Sections: 05
+Sections:
+	.text
+	.rdata
+	.rsrc
+	.data
+	.reloc
+Export Functions:
+Name			Address		Ordinal
+DllCanUnloadNow		10056F34	1
+DllGetClassObject	10056F06	2
+DllRegisterServer	10004520	3
+DllUnregisterServer	100045A0	4
+DllEntryPoint		10056CF7	[main entry]
+
+Strings:
+00000006F274   00001006F274      0   Software\Codejock Software\Xtreme Toolkit Pro

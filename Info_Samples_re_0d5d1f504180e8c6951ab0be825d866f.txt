@@ -1,0 +1,85 @@
+Analyst Name: Manohar Venkat G
+MID: M9511591
+Date: 06-10-2021
+Trainee Malware Analyst
+File Name: Samples_re_0d5d1f504180e8c6951ab0be825d866f.ico
+
+75FE109A | 0076 40                  | add byte ptr ds:[esi+40],dh                                |JMP.&GetKeyboardLayoutList
+75FE109D | 0000                     | add byte ptr ds:[eax],al                                   |
+75FE109F | 0000                     | add byte ptr ds:[eax],al                                   |
+75FE10A1 | 0000                     | add byte ptr ds:[eax],al                                   |
+75FE10A3 | 0000                     | add byte ptr ds:[eax],al                                   |
+75FE10A5 | 0000                     | add byte ptr ds:[eax],al                                   |
+75FE10A7 | 002E                     | add byte ptr ds:[esi],ch                                   |
+75FE10A9 | 0030                     | add byte ptr ds:[eax],dh                                   |
+75FE10AB | 000445 06762200          | add byte ptr ds:[eax*2+227606],al                          |
+75FE10B2 | 24 00                    | and al,0                                                   |
+75FE10B4 | E0 44                    | loopne kernelbase.75FE10FA                                 |
+75FE10B6 | 06                       | push es                                                    |
+75FE10B7 | 76 18                    | jbe kernelbase.75FE10D1                                    |
+75FE10B9 | 0000                     | add byte ptr ds:[eax],al                                   |
+75FE10BB | 0000                     | add byte ptr ds:[eax],al                                   |
+75FE10BD | 0000                     | add byte ptr ds:[eax],al                                   |
+75FE10BF | 00F0                     | add al,dh                                                  |
+75FE10C1 | F5                       | cmc                                                        |
+75FE10C2 | 0076 40                  | add byte ptr ds:[esi+40],dh                                |
+75FE10C5 | 0000                     | add byte ptr ds:[eax],al                                   |
+checking the Keyboard layouts 
+
+75FE1479 | CF                       | iretd                                                      |
+75FE147A | 0376 90                  | add esi,dword ptr ds:[esi-70]                              |
+75FE147D | 2011                     | and byte ptr ds:[ecx],dl                                   |
+75FE147F | 76 14                    | jbe kernelbase.75FE1495                                    |
+75FE1481 | 0000                     | add byte ptr ds:[eax],al                                   |
+75FE1483 | 00E0                     | add al,ah                                                  |
+75FE1485 | 13FE                     | adc edi,esi                                                | edi:"CSRLT.EXE"
+75FE1487 | 75 7C                    | jne kernelbase.75FE1505                                    |
+75FE1489 | CD 03                    | int 3                                                      |
+
+I found an executable file CSRLT.exe file. Google says as malware which is found to be pretty common. 
+
+7610C280 | 8BFF                     | mov edi,edi                                                |
+7610C282 | 55                       | push ebp                                                   |
+7610C283 | 8BEC                     | mov ebp,esp                                                |
+7610C285 | FF75 14                  | push dword ptr ss:[ebp+14]                                 | [ebp+14]:&"_^[‹å]Â\x08"
+7610C288 | FF75 10                  | push dword ptr ss:[ebp+10]                                 |
+7610C28B | FF75 0C                  | push dword ptr ss:[ebp+C]                                  |
+7610C28E | FF75 08                  | push dword ptr ss:[ebp+8]                                  |
+7610C291 | 6A 03                    | push 3                                                     |
+7610C293 | E8 D829FEFF              | call <kernelbase.GetFileVersionInfoExW>                    |
+7610C298 | 5D                       | pop ebp                                                    |
+7610C299 | C2 1000                  | ret 10                                                     |
+7610C29C | CC                       | int3                                                       |
+7610C29D | CC                       | int3                                                       |
+7610C29E | CC                       | int3                                                       |
+7610C29F | CC                       | int3                                                       |
+7610C2A0 | CC                       | int3                                                       |
+7610C2A1 | CC                       | int3                                                       |
+7610C2A2 | CC                       | int3                                                       |
+7610C2A3 | CC                       | int3                                                       |
+7610C2A4 | CC                       | int3                                                       |
+7610C2A5 | CC                       | int3                                                       |
+7610C2A6 | CC                       | int3                                                       |
+7610C2A7 | CC                       | int3                                                       |
+7610C2A8 | CC                       | int3                                                       |
+7610C2A9 | CC                       | int3                                                       |
+7610C2AA | CC                       | int3                                                       |
+7610C2AB | CC                       | int3                                                       |
+7610C2AC | CC                       | int3                                                       |
+7610C2AD | CC                       | int3                                                       |
+7610C2AE | CC                       | int3                                                       |
+7610C2AF | CC                       | int3                                                       |
+7610C2B0 | 8BFF                     | mov edi,edi                                                |
+7610C2B2 | 55                       | push ebp                                                   |IsInternetESCEnabled
+checking the internet explorere security 
+
+
+7610CC2E | CC                       | int3                                                       |
+7610CC2F | CC                       | int3                                                       |
+7610CC30 | 8BFF                     | mov edi,edi                                                |
+7610CC32 | 55                       | push ebp                                                   |
+7610CC33 | 8BEC                     | mov ebp,esp                                                |DeleteFile
+
+We can see that lot of internet request happens and creation and deletion of files takes place.
+
+Verdict: Its a malware
